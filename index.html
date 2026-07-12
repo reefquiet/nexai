@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexfy AI Tam Komut Envanteri</title>
+<style>
+    :root {
+        --nexfy-dark: #0f1021;
+        --nexfy-purple: #8A70FF;
+        --nexfy-blue: #32a6ff;
+        --nexfy-text: #e0e0e0;
+        --nexfy-panel: #1a1b3a;
+        --nexfy-green: #4CAF50;
+        --nexfy-red: #ff5252;
+    }
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--nexfy-text); max-width: 1000px; margin: 0 auto; padding: 20px; background-color: var(--nexfy-dark); }
+    .container { background: var(--nexfy-panel); padding: 40px; border-radius: 24px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 1px solid rgba(138, 112, 255, 0.2); }
+    
+    .header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; }
+    .logo-img { max-width: 320px; height: auto; margin-bottom: 15px; border-radius: 12px; }
+    h1 { color: var(--nexfy-blue); margin: 10px 0; font-size: 2.5em; letter-spacing: 1px; }
+    .status-badge { display: inline-block; padding: 5px 15px; background: var(--nexfy-purple); color: #fff; border-radius: 30px; font-size: 0.85em; font-weight: bold; }
+
+    h2 { color: var(--nexfy-purple); margin-top: 45px; font-size: 1.6em; border-left: 5px solid var(--nexfy-blue); padding-left: 15px; display: flex; align-items: center; justify-content: justify; }
+    .category-desc { color: #aaa; font-size: 0.95em; margin-bottom: 20px; font-style: italic; }
+
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 12px; padding: 18px; background: rgba(255,255,255,0.04); border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.25s ease; }
+    li:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); border-color: var(--nexfy-blue); }
+
+    .cmd-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    code { background: rgba(50, 166, 255, 0.15); padding: 4px 10px; border-radius: 8px; color: var(--nexfy-blue); font-family: 'Consolas', monospace; font-size: 1em; font-weight: bold; }
+    .en-tag { color: #777; font-size: 0.85em; display: block; margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px; }
+    
+    .tag { font-size: 0.65em; padding: 3px 12px; border-radius: 20px; margin-left: 12px; font-weight: bold; text-transform: uppercase; }
+    .tag-local { background: var(--nexfy-green); color: #fff; }
+    .tag-cloud { background: #1565c0; color: #fff; }
+    
+    .rule-box { background: linear-gradient(135deg, #1e1e4a 0%, #0f1021 100%); border: 1px solid var(--nexfy-purple); padding: 30px; border-radius: 20px; margin-top: 60px; }
+    .rule-box h3 { color: var(--nexfy-blue); margin-top: 0; display: flex; align-items: center; }
+    .rule-box li { background: transparent; border: none; padding: 5px 0; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); border-radius: 0; }
+    .rule-box li:hover { transform: none; }
+    
+    .important { color: var(--nexfy-red); font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="Nexfy-Logo.png" alt="Nexfy Launcher" class="logo-img" width="160">
+        <h1>AI Komut Ansiklopedisi</h1>
+        <div class="status-badge">Sürüm 1.5 • Klasör & Dinamik Navigasyon Aktif</div>
+    </div>
+
+    <!-- 1. KLASÖR YÖNETİMİ -->
+    <section>
+        <h2>1. Klasör Yönetimi <span class="tag tag-cloud">Bulut Zekası</span></h2>
+        <p class="category-desc">Değişken isimleri anlar ve klasörleri otomatik olarak listenin en başına (VIP Sıra) yerleştirir.</p>
+        <ul>
+            <li>
+                <strong>Klasör Oluşturma:</strong>
+                <div class="cmd-group">
+                    <code>[İsim] isimli yeni klasör oluştur</code> <code>[İsim] adında bir klasör aç</code> <code>yeni bir [İsim] klasörü yap</code>
+                </div>
+                <span class="en-tag">EN: "Create a new folder named [Name]", "Make a [Name] folder"</span>
+            </li>
+            <li>
+                <strong>Uygulama Ekleme:</strong>
+                <div class="cmd-group">
+                    <code>[Uygulama]'yı [Klasör] klasörüne koy</code> <code>[Uygulama]'yı [Klasör]'e ekle</code> <code>bu uygulamayı [Klasör] içine at</code>
+                </div>
+                <span class="en-tag">EN: "Put [App] into [Folder] folder", "Add [App] to [Folder]"</span>
+            </li>
+            <li>
+                <strong>Uygulama Çıkarma:</strong>
+                <div class="cmd-group">
+                    <code>[Uygulama] uygulamasını klasörden çıkar</code> <code>[Uygulama]'yı klasör dışına al</code>
+                </div>
+                <span class="en-tag">EN: "Remove [App] from folder", "Take [App] out of the folder"</span>
+            </li>
+            <li>
+                <strong>İsim Değiştirme:</strong>
+                <div class="cmd-group">
+                    <code>[Eski Ad] klasörünün adını [Yeni Ad] yap/değiştir</code> <code>[Eski Ad]'ı [Yeni Ad] olarak yeniden adlandır</code>
+                </div>
+                <span class="en-tag">EN: "Rename [Old Name] to [New Name]", "Change [Old] folder name to [New]"</span>
+            </li>
+            <li>
+                <strong>Klasör Silme:</strong>
+                <div class="cmd-group">
+                    <code>[İsim] klasörünü tamamen sil</code> <code>[İsim] klasörünü kaldır</code>
+                </div>
+                <span class="en-tag">EN: "Delete the [Name] folder", "Remove [Name] folder"</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 2. SİSTEM VE NAVİGASYON -->
+    <section>
+        <h2>2. Navigasyon & Kontrol <span class="tag tag-local">Yerel</span></h2>
+        <p class="category-desc">İnternet gerektirmeyen, doğrudan arayüzü kontrol eden anlık komutlar.</p>
+        <ul>
+            <li>
+                <strong>Ana Ekran & Geri:</strong>
+                <div class="cmd-group">
+                    <code>ana ekrana dön</code> <code>ana sayfaya git</code> <code>eve dön</code> <code>geri git</code> <code>back</code>
+                </div>
+            </li>
+            <li>
+                <strong>Yönler & Adımlı Geçiş:</strong>
+                <div class="cmd-group">
+                    <code>sağa git</code> <code>iki sağa</code> <code>üç sola git</code> <code>aşağı in</code> <code>iki aşağı yap</code> <code>yukarı çık</code>
+                </div>
+                <span class="en-tag">EN: "Move two right", "Go three down", "Move left", "Go up"</span>
+            </li>
+            <li>
+                <strong>Hızlı Erişim:</strong>
+                <div class="cmd-group">
+                    <code>en üste git</code> <code>en yukarı</code> <code>en alta git</code> <code>en aşağı</code> <code>ilk uygulamaya git</code> <code>sonuncuyu seç</code>
+                </div>
+            </li>
+            <li>
+                <strong>Onaylama:</strong>
+                <div class="cmd-group">
+                    <code>seç</code> <code>tıkla</code> <code>tamam</code> <code>okey</code> <code>başlat</code> <code>aç</code> <code>enter</code>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 3. FAVORİ YÖNETİMİ -->
+    <section>
+        <h2>3. Favori & Sabitleme <span class="tag tag-local">Yerel</span></h2>
+        <p class="category-desc">Uygulama veya klasör fark etmeksizin öğeleri favori listesine taşır.</p>
+        <ul>
+            <li>
+                <strong>Favoriye Ekleme:</strong>
+                <div class="cmd-group">
+                    <code>[Uygulama/Klasör]'ü favorilere ekle</code> <code>[İsim]'i sabitle</code> <code>bunu favoriye al</code>
+                </div>
+                <span class="en-tag">EN: "Add [Name] to favorites", "Pin [Name]", "Favorite this"</span>
+            </li>
+            <li>
+                <strong>Favoriden Çıkarma:</strong>
+                <div class="cmd-group">
+                    <code>[Uygulama/Klasör]'ü favorilerden çıkar</code> <code>[İsim] sabitlemesini kaldır</code> <code>unpin [İsim]</code>
+                </div>
+                <span class="en-tag">EN: "Remove [Name] from favorites", "Unpin [Name]"</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 4. AYARLAR VE ARAÇLAR -->
+    <section>
+        <h2>4. Ayarlar & İstatistikler <span class="tag tag-local">Yerel</span></h2>
+        <p class="category-desc important">DİKKAT: Güvenlik için bu komutlarda "aç" veya "çalıştır" kelimesi zorunludur.</p>
+        <ul>
+            <li>
+                <strong>Sistem Ayarları:</strong>
+                <div class="cmd-group">
+                    <code>wifi ayarlarını aç</code> <code>bluetooth ayarlarını çalıştır</code> <code>ebeveyn denetimini göster</code> <code>nexfy ayarlarını aç</code>
+                </div>
+            </li>
+            <li>
+                <strong>İzleyiciler (Widget):</strong>
+                <div class="cmd-group">
+                    <code>ram izleyiciyi göster</code> <code>internet hızını aç</code> <code>ping göstergesini kapat</code> <code>trafik widget'ını gizle</code>
+                </div>
+            </li>
+            <li>
+                <strong>Temizlik:</strong>
+                <div class="cmd-group">
+                    <code>hafızayı temizle</code> <code>ram temizle</code> <code>sistemi hızlandır</code> <code>belleği boşalt</code>
+                </div>
+            </li>
+            <li>
+                <strong>Görünüm:</strong>
+                <div class="cmd-group">
+                    <code>favorileri aşağı yasla</code> <code>kategorileri gizle</code> <code>uygulama isimlerini aç</code> <code>arka planı değiştir</code>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 5. UYGULAMA KISAYOLLARI -->
+    <section>
+        <h2>5. Uygulama Başlatma <span class="tag tag-local">Yerel</span></h2>
+        <p class="category-desc">Yüklü olan tüm uygulamalar için geçerlidir.</p>
+        <ul>
+            <li>
+                <strong>Video & TV:</strong>
+                <div class="cmd-group">
+                    <code>YouTube aç</code> <code>Netflix'i çalıştır</code> <code>TiviMate başlat</code> <code>Disney Plus'ı aç</code> <code>VLC çalıştır</code>
+                </div>
+            </li>
+            <li>
+                <strong>Müzik & Diğer:</strong>
+                <div class="cmd-group">
+                    <code>Spotify aç</code> <code>YouTube Music çalıştır</code> <code>Chrome başlat</code> <code>Play Store aç</code>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 6. BULUT & AKIL YÜRÜTME -->
+    <section>
+        <h2>6. Bilgi & Sohbet <span class="tag tag-cloud">Bulut</span></h2>
+        <p class="category-desc">Launcher dışındaki genel kültür ve yardım soruları.</p>
+        <ul>
+            <li><strong>Genel Sorular:</strong> <code>Bugün hava nasıl?</code> <code>Atatürk kimdir?</code> <code>Bana bir fıkra anlat</code></li>
+            <li><strong>Tavsiyeler:</strong> <code>Film önerisi ver</code> <code>Akşama ne yemek yapabilirim?</code></li>
+        </ul>
+    </section>
+
+    <!-- ÖNEMLİ KURALLAR BOX -->
+    <div class="rule-box">
+        <h3>Nexfy AI Kullanım Kuralları</h3>
+        <ul>
+            <li><span class="important">Eylem Şartı:</span> Bir uygulamayı sadece adıyla söylemek (örn: "VLC") artık onu açmaz. Klasör komutlarıyla karışmaması için mutlaka <strong>"VLC aç"</strong> veya <strong>"VLC çalıştır"</strong> demelisiniz.</li>
+            <li><span class="important">VIP Sıralama:</span> Yeni oluşturulan veya bir uygulama eklenen klasörler, her zaman listenin en başına (ilk sıraya) otomatik taşınır.</li>
+            <li><span class="important">Susturma:</span> AI çok uzun konuşursa kumandadan <strong>BACK (Geri)</strong> tuşuna basarak onu anında susturabilirsiniz.</li>
+            <li><span class="important">Dinamik İsim:</span> Klasör isimleri otomatik olarak <strong>"Klasör"</strong> (İlk harf büyük) formatına çevrilir.</li>
+            <li><span class="important">Akıllı Çıkarma:</span> Bir uygulamayı klasörden çıkardığınızda, uygulama rastgele bir yere gitmez, tam olarak o klasörün yanına yerleşir.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
