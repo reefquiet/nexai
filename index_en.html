@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexfy AI - Ultimate Command Inventory</title>
+    <style>
+        :root {
+            --nx-bg: #0b0c18; --nx-panel: #161730; --nx-blue: #32a6ff; --nx-purple: #8A70FF;
+            --nx-text: #e0e0e0; --nx-green: #4CAF50; --nx-red: #ff5252; --nx-code: rgba(50, 166, 255, 0.15);
+        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.4; color: var(--nx-text); max-width: 1100px; margin: 0 auto; padding: 20px; background-color: var(--nx-bg); }
+        .container { background: var(--nx-panel); padding: 40px; border-radius: 24px; box-shadow: 0 25px 70px rgba(0,0,0,0.7); border: 1px solid rgba(138, 112, 255, 0.2); }
+        .header { text-align: center; margin-bottom: 35px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 25px; }
+        .logo-img { max-width: 280px; margin-bottom: 15px; border-radius: 12px; }
+        h1 { color: var(--nx-blue); font-size: 2.2em; margin: 5px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .badge { display: inline-block; padding: 4px 15px; background: var(--nx-purple); color: #fff; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
+        h2 { color: var(--nx-purple); margin-top: 35px; font-size: 1.4em; border-left: 5px solid var(--nx-blue); padding-left: 15px; background: rgba(255,255,255,0.02); padding-top: 6px; padding-bottom: 6px; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 12px; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .cmd-group { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+        code { background: var(--nx-code); padding: 3px 8px; border-radius: 6px; color: var(--nx-blue); font-family: monospace; font-size: 0.9em; font-weight: bold; }
+        .alias-title { font-weight: bold; color: #fff; display: block; margin-bottom: 4px; font-size: 1em; }
+        .important { color: var(--nx-red); font-weight: bold; }
+        .rule-box { background: #0f1021; border: 1px solid var(--nx-purple); padding: 25px; border-radius: 20px; margin-top: 40px; }
+        .lang-en { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; margin-top: 20px; font-size: 0.9em; border-left: 4px solid #fff; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="Nexfy-Logo.png" alt="Nexfy Logo" class="logo-img" width="150">
+        <h1>Ultimate AI Command Inventory</h1>
+        <div class="badge">Version 1.8 • Full Comprehensive Dictionary</div>
+    </div>
+
+    <!-- 1. FOLDER MANAGEMENT -->
+    <section>
+        <h2>1. SMART FOLDER SYSTEM (Dynamic)</h2>
+        <ul>
+            <li><span class="alias-title">Creation:</span><div class="cmd-group"><code>create a new folder named [Name]</code> <code>open a folder named [Name]</code> <code>make a new [Name] folder</code> <code>set up [Name] folder</code></div></li>
+            <li><span class="alias-title">Add & Move:</span><div class="cmd-group"><code>put [App] into [Folder] folder</code> <code>add [App] to [Folder]</code> <code>move this app inside [Folder]</code> <code>send [App] to folder</code></div></li>
+            <li><span class="alias-title">Removal:</span><div class="cmd-group"><code>remove [App] app from folder</code> <code>take [App] out of the folder</code> <code>extract [App] from folder</code></div></li>
+            <li><span class="alias-title">Renaming:</span><div class="cmd-group"><code>change name of [Old Name] folder to [New Name]</code> <code>rename [Old Name] as [New Name]</code> <code>rename [Name] folder</code></div></li>
+            <li><span class="alias-title">Deletion:</span><div class="cmd-group"><code>delete [Name] folder</code> <code>completely remove [Name] folder</code> <code>cancel [Name] folder</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 2. NAVIGATION -->
+    <section>
+        <h2>2. NAVIGATION AND INTERFACE CONTROL</h2>
+        <ul>
+            <li><span class="alias-title">Directions (Basic):</span><div class="cmd-group"><code>go right</code> <code>go left</code> <code>go up</code> <code>go down</code> <code>turn right</code> <code>turn left</code> <code>move up</code> <code>move down</code> <code>go to top</code> <code>go to bottom</code></div></li>
+            <li><span class="alias-title">N-Step Navigation:</span><div class="cmd-group"><code>move two right</code> <code>move three right</code> <code>move four right</code> <code>move two left</code> <code>go down two</code> <code>go down three</code> <code>go up two</code></div></li>
+            <li><span class="alias-title">Edge Boundaries:</span><div class="cmd-group"><code>go to the very top</code> <code>all the way up</code> <code>go to the very bottom</code> <code>all the way down</code> <code>return to start</code> <code>go to end</code> <code>go to the first app</code> <code>select the last one</code></div></li>
+            <li><span class="alias-title">Screens & Confirmation:</span><div class="cmd-group"><code>return to home screen</code> <code>home</code> <code>go back</code> <code>back</code> <code>open apps</code> <code>all apps</code> <code>open favorites</code> <code>search</code> <code>select</code> <code>click</code> <code>okay</code> <code>ok</code> <code>start</code> <code>open</code> <code>enter</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 3. SETTINGS -->
+    <section>
+        <h2>3. SETTINGS AND CATEGORIES</h2>
+        <span class="important">Mandatory Trigger Word: "Open", "Run", "Show", or "Start"</span>
+        <ul>
+            <li><span class="alias-title">Categories:</span><div class="cmd-group"><code>open wifi settings</code> <code>show internet settings</code> <code>run network settings</code> <code>open bluetooth settings</code> <code>blue tooth settings</code> <code>open parental control</code> <code>show child lock</code> <code>open adult controls</code> <code>open security settings</code> <code>run pin settings</code> <code>open appearance settings</code> <code>show theme settings</code> <code>style settings</code> <code>open nexfy settings</code> <code>open device settings</code> <code>show system settings</code> <code>open android settings</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 4. TOOLS -->
+    <section>
+        <h2>4. SYSTEM TOOLS AND WIDGETS</h2>
+        <ul>
+            <li><span class="alias-title">Monitors:</span><div class="cmd-group"><code>show/hide ram monitor</code> <code>open/close ram stats</code> <code>open ram indicator</code> <code>show ram widget</code> <code>show/hide ping monitor</code> <code>open/close latency indicator</code> <code>show ping stats</code> <code>network traffic monitor</code> <code>show internet speed</code> <code>open speed test</code> <code>show speed indicator</code></div></li>
+            <li><span class="alias-title">Visibility:</span><div class="cmd-group"><code>hide/open categories</code> <code>show/hide row names</code> <code>turn off/on headers</code> <code>show/hide icon names</code> <code>open/close app names</code> <code>dock favorites to bottom</code> <code>turn on/off dock mode</code> <code>switch to normal favorites</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 5. PERFORMANCE AND HARDWARE -->
+    <section>
+        <h2>5. PERFORMANCE, AUDIO AND HARDWARE</h2>
+        <ul>
+            <li><span class="alias-title">Cleaning (Real Execution):</span><div class="cmd-group"><code>clear memory</code> <code>clear ram</code> <code>speed up system</code> <code>free up memory</code> <code>clean</code> <code>speed up</code> <code>refresh device</code></div></li>
+            <li><span class="alias-title">Hardware & Environment:</span><div class="cmd-group"><code>turn off sound (mute)</code> <code>mute</code> <code>silence audio</code> <code>turn on sound</code> <code>unmute</code> <code>bring back audio</code> <code>set volume to 50 percent</code> <code>volume up/down</code> <code>change background</code> <code>next background</code> <code>refresh wallpaper</code> <code>set another wallpaper</code> <code>weather</code> <code>how is the weather</code> <code>enter standby mode</code> <code>turn off screen</code> <code>turn on standby mode</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 6. FAVORITE AND PIN -->
+    <section>
+        <h2>6. FAVORITES AND PINNING (Pin/Unpin)</h2>
+        <ul>
+            <li><span class="alias-title">For App or Folder:</span><div class="cmd-group"><code>add [Name] to favorites</code> <code>pin [Name]</code> <code>move [Name] to favorites</code> <code>pin this</code> <code>add this to favorites</code> <code>remove [Name] from favorites</code> <code>unpin [Name]</code> <code>make [Name] unpinned</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 7. SEARCH -->
+    <section>
+        <h2>7. SEARCH AND FIND</h2>
+        <ul>
+            <li><span class="alias-title">Content Search:</span><div class="cmd-group"><code>search [Query]</code> <code>find [Query]</code> <code>look up [Query]</code> <code>search app</code> <code>open search window</code></div></li>
+        </ul>
+    </section>
+
+    <!-- 8. DIRECT ACTIONS -->
+    <section class="lang-en">
+        <span class="alias-title" style="color: #fff;">8. ALTERNATIVE LEGACY & DIRECT ACTIONS</span>
+        <div class="cmd-group">
+            <code>open [App]</code> <code>run [App]</code> <code>create folder [Name]</code> <code>put [App] in [Folder]</code> <code>rename [X] to [Y]</code> <code>delete folder [X]</code> <code>move two right</code> <code>go home</code> <code>mute</code> <code>unmute</code> <code>clear memory</code> <code>speed up</code> <code>change background</code> <code>next wallpaper</code> <code>weather</code> <code>go back</code> <code>move to top</code>
+        </div>
+    </section>
+
+    <!-- RULES -->
+    <div class="rule-box">
+        <h3>Professional Usage Rules</h3>
+        <ul>
+            <li><span class="important">Action Requirement:</span> Simply saying "YouTube" will not launch it. You must explicitly say <strong>"open YouTube"</strong> or <strong>"run YouTube"</strong>.</li>
+            <li><span class="important">Muting AI:</span> While the AI is speaking, you can instantly cut the audio by pressing the <strong>BACK</strong> button on the remote control.</li>
+            <li><span class="important">VIP Queue:</span> Every newly created folder is automatically moved to the very top of the list.</li>
+            <li><span class="important">Custom Aliases:</span> Common mispronunciations or slangs like "The Tube" (YouTube), "Netflix and chill" (Netflix), or "Blue Tooth" (Bluetooth) are natively supported by the system.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
